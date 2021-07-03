@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F9F7F7"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/editTextTextMultiLine"
+        android:layout_width="346dp"
+        android:layout_height="56dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:clickable="false"
+        android:ems="10"
+        android:gravity="start|fill|top|left"
+        android:inputType="textMultiLine"
+        android:text="Hi, welcome to DYSXA an amazing way to learn while play"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/buttonPractice"
+
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/button"
+
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="false"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/colorMediumDark"
+        android:onClick="openLearning"
+        android:scaleType="fitCenter"
+        android:src="@drawable/learning"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPlay"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintVertical_weight="5" />
+
+    <ImageButton
+        android:id="@+id/buttonPlay"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_below="@id/button29"
+        android:layout_centerInParent="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:layout_toRightOf="@id/button"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/colorMediumDark"
+        android:onClick="openQuizzing"
+        android:scaleType="fitCenter"
+        android:src="@drawable/game_console"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/buttonPractice"
+        app:layout_constraintTop_toBottomOf="@+id/button29"
+        app:layout_constraintVertical_weight="5" />
+
+    <ImageButton
+        android:id="@+id/button29"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_below="@id/editTextTextMultiLine"
+        android:layout_centerInParent="false"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="32dp"
+        android:layout_toRightOf="@id/button"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/colorMediumDark"
+        android:onClick="openQuizzing"
+        android:scaleType="fitCenter"
+        android:src="@drawable/choose"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPlay"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintVertical_weight="5" />
+
+    <ImageButton
+        android:id="@+id/button"
+
+        style="@style/Widget.AppCompat.ImageButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_below="@id/editTextTextMultiLine"
+        android:layout_alignParentTop="false"
+        android:layout_centerInParent="false"
+        android:layout_centerHorizontal="false"
+
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/roundbutton"
+
+        android:backgroundTint="@color/colorMediumDark"
+        android:onClick="openLearning"
+        android:scaleType="fitCenter"
+        android:src="@drawable/book"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/colorAccent"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonPractice"
+        app:layout_constraintEnd_toStartOf="@+id/button29"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2"
+        app:layout_constraintVertical_weight="5" />
+
+    <ImageButton
+        android:id="@+id/button30"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+
+        android:layout_marginStart="186dp"
+        android:layout_marginEnd="185dp"
+        android:layout_marginBottom="64dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/colorMediumDark"
+        android:onClick="openInformation"
+        android:src="@android:drawable/ic_menu_info_details"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="354dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@+id/divider3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dysxa_logo" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="64dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider3" />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="32dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@+id/button30"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

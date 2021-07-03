@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FollowAlphabet">
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifView"
+        android:layout_width="409dp"
+        android:layout_height="204dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="24dp"
+        android:background="#F4EFEF"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/inkView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+    <com.subhaaspa.dysxa.InkView
+        android:id="@+id/inkView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifView"
+        app:layout_constraintVertical_weight="10" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/colorMediumDark"
+        android:onClick="checkLetterDrawn"
+        android:text="Check"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/clear"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inkView"
+        app:layout_constraintVertical_weight="1" />
+
+    <Button
+        android:id="@+id/clear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/colorMediumDark"
+        android:onClick="clearCanvas"
+
+        android:text="Clear"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/again"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@+id/submit"
+        app:layout_constraintTop_toBottomOf="@+id/inkView"
+        app:layout_constraintVertical_weight="1" />
+
+    <Button
+        android:id="@+id/again"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/colorMediumDark"
+        android:onClick="nextLetter"
+
+        android:text="Next"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="5"
+        app:layout_constraintStart_toEndOf="@+id/clear"
+        app:layout_constraintTop_toBottomOf="@+id/inkView"
+        app:layout_constraintVertical_weight="1" />
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/a1490886326_26_alphabet_82474" />
+
+    <EditText
+        android:id="@+id/inputText"
+        style="@android:style/Widget.DeviceDefault.EditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="40dp"
+        android:background="#FFFFFF"
+        android:ems="10"
+        android:hint="letter to start with"
+        android:inputType="textPersonName"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#3949AB"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/gifView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton7"
+        android:layout_width="53dp"
+        android:layout_height="47dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="4dp"
+        android:background="@drawable/roundbutton"
+        android:backgroundTint="@color/colorPrimaryDark"
+        android:onClick="assignLetter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/stat_notify_sync" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
